@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            tabel{
+                font-family: Arial,sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            td,th{
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even){
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>date</th>
+                <th>trans</th>
+                <th>symbol</th>
+                <th>qty</th>
+                <th>price</th>
+            </tr>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{stock[0]}}</td>
+                    <td>{{stock[1]}}</td>
+                    <td>{{stock[2]}}</td>
+                    <td>{{stock[3]}}</td>
+                    <td>{{stock[4]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
